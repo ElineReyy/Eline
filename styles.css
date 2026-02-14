@@ -1,0 +1,58 @@
+/* General Styles */
+body {
+    background-color: #f0f8ff;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* Game Board */
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 10px;
+    margin: 20px auto;
+    width: 80%;
+}
+
+/* Question Cards */
+.card {
+    background-color: #ffeb3b;
+    border: 2px solid #ffc107;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Buttons */
+.button {
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: #3700b3;
+}
+
+/* Animations */
+@keyframes glow {
+    0% { text-shadow: 0 0 5px #ffeb3b, 0 0 10px #ffeb3b; }
+    50% { text-shadow: 0 0 20px #ffc107, 0 0 30px #ffc107; }
+    100% { text-shadow: 0 0 5px #ffeb3b, 0 0 10px #ffeb3b; }
+}
+
+/* Title */
+h1 {
+    margin-bottom: 20px;
+    animation: glow 1.5s infinite alternate;
+}
